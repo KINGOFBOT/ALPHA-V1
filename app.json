@@ -2,7 +2,7 @@
   "name": "ALPHA MULTI DEVICE",
   "description": "whatsapp md bot build with nodejs",
   "repository": "https://github.com/ALPHA-TEAM-OFFICIAL/ALPHA-MD-",
-  "avatar": "",
+  "avatar": "https://telegra.ph/file/7a19c6eceee6068ac5094.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
    "env": { 
         "ALIVE_MASSAGE": {
