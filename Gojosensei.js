@@ -3367,7 +3367,14 @@ reply("Success Changing Menu To "+q)
 }
 
                     break
-                     case 'alive': case 'bot':{
+		case 'alive': {
+                           	let MSG = ''
+if (Config.ALIVEMSG == 'default') MSG = `*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*\n*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*\n\n*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*\n*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*\n*◯●Github Link :►https://github.com/\n\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞`
+else MSG = `*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*\n*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*\n\n*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*\n*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*\n*◯●Github Link :►https://github.com/\n\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞`
+                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: MSG }, { quoted: m })
+         }
+break
+                     case 'alivexx': case 'botxx':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3427,7 +3434,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-            case 'list': case 'menu': {
+            case 'listxx': case 'menuxx': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -3487,6 +3494,73 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
+		case 'alpha': {
+            	XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
+*╭─「 ᴀʟᴘʜᴀ ᴍᴅ ᴍᴇɴᴜ」*
+ │
+ ├─────────••‣
+ *│🌼ʜᴇʟʟᴏ,* ɪ'ᴍ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ
+ *│👤ᴅᴇᴠᴇʟᴏᴘᴇʀ:* ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ
+ *│💎ᴘʟᴀᴛғᴏʀᴍ:* ʟɪɴᴜx
+ *│🛡️ᴡᴏʀᴋɪɴɢ ᴀs:* ᴘᴜʙʟɪᴄ
+  │ 
+  │  ©️ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ
+ ╰──────────••‣
+ ╭──────────••‣
+*│🛡️ᴀʟᴘʜᴀ ᴍᴀɪɴ ᴄᴏᴍᴍᴀɴᴅs*
+ │   ───────
+ │
+ │► ${prefix}ᴀʟɪᴠᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ sᴛᴀᴛᴜs]
+ │► ${prefix}ʙᴏᴛ [ᴄʜᴀᴛ ᴡɪᴛʜ ʙᴏᴛ]
+ │► ${prefix}ᴀᴅᴍɪɴ [ᴀʟᴘʜᴀ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅs]
+ │► ${prefix}sᴇᴛᴛɪɴɢs [ᴄʜᴀɴɢᴇ ʙᴏᴛ ʜᴇʀᴏᴋᴜ]
+ │► ${prefix}ᴜᴘᴅᴀᴛᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs]
+ │► ${prefix}ᴜᴘᴅᴀᴛᴇ ɴᴏᴡ [ɢᴇᴛ ᴜᴘᴅᴀᴛᴇs]
+ │► ${prefix}ʀᴇsᴛᴀʀᴛ [ʀᴇsᴛᴀʀᴛ ʙᴏᴛ] 
+ ╰────────────••‣
+ ╭────────────••‣
+ *│💰ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴍᴀɴᴅs*
+ │      ────────
+ │► ${prefix}ᴠɪᴅᴇᴏ [ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏs]
+ │► ${prefix}sᴏɴɢ [ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ sᴏɴɢs]
+ │► ${prefix}ɪᴍɢ
+ │► ${prefix}ғʙ 
+ │► ${prefix}ᴛɪᴋᴛᴏᴋ
+ │► ${prefix}ᴍᴇᴅɪᴀғɪʀᴇ
+ ╰────────────••‣
+ ╭────────────••‣
+ *│🛸ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅs*
+ │  ─────────
+ │► ${prefix}ʀᴇɴᴀᴍᴇ [ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴘ ɴᴀᴍᴇ]
+ │► ${prefix}ᴛᴀɢᴀᴅᴍɪɴ 
+ │► ${prefix}ᴄʟᴇᴀʀ
+ │► ${prefix}ʀᴇᴘᴏʀᴛ
+ │► ${prefix}ᴛᴀɢᴀʟʟ  
+ │► ${prefix}ᴀᴅᴅ 
+ │► ${prefix}ᴘʀᴏᴍᴏᴛᴇ
+ │► ${prefix}ᴅᴇᴍᴏᴛᴇ 
+ │► ${prefix}ɪɴᴠɪᴛᴇ [ɢᴇᴛ ɢʀᴏᴜᴘ ʟɪɴᴋ] 
+ │► ${prefix}ᴋɪᴄᴋᴍᴇ
+ ╰───────────••‣
+ ╭───────────••‣
+ *│🎭ᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅs*
+ │      ───────
+ │► ${prefix}ᴡᴀʟʟᴘᴀᴘᴇʀ [+15 ᴡᴀʟʟᴘᴀᴘᴇʀs]
+ │► ${prefix}ғғᴘᴀᴄᴋ [ᴄʀᴇᴀᴛᴇ ғғ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
+ │► ${prefix}ᴛᴇxᴛɪᴍɢ [ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
+ │► ${prefix}sᴛɪᴄᴋᴇʀᴘᴀᴄᴋ [ɢᴇᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ]
+ ╰───────────••‣
+ ╭───────────••‣
+ *│⚙️ʙᴏᴛ sᴇᴛᴛɪɴɢs*
+ │    ───────
+ │► ᴛʏᴘᴇ .sᴇᴛᴛɪɴɢs ғᴏʀ ɢᴇᴛ ʙᴏᴛ sᴇᴛᴛɪɴɢ ᴍᴇɴᴜ
+ │    
+ │   ᴛʜᴀɴᴋ ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ💕  
+ │
+ ╰───────────••‣`
+}, { quoted: m })
+           }
+		break
                 case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
