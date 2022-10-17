@@ -3369,7 +3369,6 @@ reply("Success Changing Menu To "+q)
                     break
 		case 'alive': {
                            	let MSG = ''
-if (Config.ALIVEMSG == 'default') MSG = `*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*\n*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*\n\n*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*\n*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*\n*◯●Github Link :►https://github.com/\n\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞`
 else MSG = `*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*\n*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*\n\n*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*\n*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*\n*◯●Github Link :►https://github.com/\n\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞`
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: MSG }, { quoted: m })
          }
@@ -3495,7 +3494,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 }
                 break
 		case 'alpha': {
-            	XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
+            	GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
 *╭─「 ᴀʟᴘʜᴀ ᴍᴅ ᴍᴇɴᴜ」*
  │
  ├─────────••‣
