@@ -3570,7 +3570,43 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }, { quoted: m })
            }
 		break
-                case 'command': {
+	case 'hotmetal': {
+		if (!encodeURIComponent(t[1])) return await m.sendReply("*Need text*")
+let api_url = base.format("https://textpro.me/hot-metal-text-effect-843.html",encodeURIComponent(t[1]))
+await m.sendMessage("_Please wait..._")
+let result_url = (await axios(api_url)).data
+if (typeof result_url === "number") return await m.sendReply("*Need "+result_url+" text!*\n*Ex: Alpha1,Alpha2*")
+await m.sendReply({url: result_url},'image') 
+	}   
+		break
+	case 'glowsliced': {
+			if (!encodeURIComponent(t[1])) return await m.sendReply("*Need text*")
+let api_url = base.format("https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",encodeURIComponent(t[1]))
+await m.sendMessage("_Please wait..._")
+let result_url = (await axios(api_url)).data
+if (typeof result_url === "number") return await m.sendReply("*Need "+result_url+" text!*\n*Ex: Alpha1,Alpha2*")
+await m.sendReply({url: result_url},'image')
+	}
+		break
+	case 'neonlight': {
+				if (!encodeURIComponent(t[1])) return await m.sendReply("*Need text*")
+let api_url = base.format("https://textpro.me/create-neon-light-on-brick-wall-online-1062.html",encodeURIComponent(t[1]))
+await m.sendMessage("_Please wait..._")
+let result_url = (await axios(api_url)).data
+if (typeof result_url === "number") return await m.sendReply("*Need "+result_url+" text!*\n*Ex: Alpha1,Alpha2*")
+await m.sendReply({url: result_url},'image')
+	}
+		break
+	case 'newyear': {
+					if (!encodeURIComponent(t[1])) return await m.sendReply("*Need text*")
+let api_url = base.format("https://textpro.me/happy-new-year-2022-greeting-3d-card-1058.html",encodeURIComponent(t[1]))
+await m.sendMessage("_Please wait..._")
+let result_url = (await axios(api_url)).data
+if (typeof result_url === "number") return await m.sendReply("*Need "+result_url+" text!*\n*Ex: Alpha1,Alpha2*")
+await m.sendReply({url: result_url},'image')
+	}
+		break
+		case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
