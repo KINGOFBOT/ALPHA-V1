@@ -3368,11 +3368,21 @@ reply("Success Changing Menu To "+q)
 
                     break
 		case 'alive': {
-                           	let MSG = ''
-else MSG = `*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*\n*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*\n\n*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*\n*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*\n*◯●Github Link :►https://github.com/\n\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞`
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: MSG }, { quoted: m })
-         }
-break
+                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
+*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*
+*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*
+
+*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*
+*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*
+*◉ɢɪᴛʜᴜʙ ʟɪɴᴋ :►https://github.com/MrTimax/ALPHA-MD*
+*◉ʀᴜɴ ᴛɪᴍᴇ :► ${runtime(process.uptime())}
+  
+  *ᴛʏᴘᴇ .ᴀʟᴘʜᴀ ᴛᴏ ɢᴇᴛ ᴀʟᴘʜᴀ ʙᴏᴛ ᴍᴇɴᴜ*
+
+ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞` 
+ }, { quoted: m })
+            }
+		break
                      case 'alivexx': case 'botxx':{
                            	timestampe = speed();
 latensie = speed() - timestampe
