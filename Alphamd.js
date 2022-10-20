@@ -3443,6 +3443,18 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
+		 case 'public': {
+                if (!isCreator) return replay(`${mess.owner}`)
+                GojoMdNx.public = true
+                reply('*ᴀʟᴘʜᴀ ʙᴏᴛ ᴡᴏʀᴋɪɴɢ ᴀs ᴘᴜʙʟɪᴄ*')
+            }
+		break
+		 case 'private': {
+                if (!isCreator) return replay(`${mess.owner}`)
+                GojoMdNx.public = false
+                reply('*ᴀʟᴘʜᴀ ʙᴏᴛ ᴡᴏʀᴋɪɴɢ ᴀs ᴘʀɪᴠᴀᴛᴇ*')
+            }
+		break
             case 'listxx': case 'menuxx': {
             	timestampe = speed();
 latensie = speed() - timestampe
@@ -3503,6 +3515,16 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
+	case 'ff02': {
+		if (match[1] === '') return await message.sendMessage('*Please Wait...*');
+
+        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${encodeURIComponent(match[1])}&img=https://telegra.ph/file/4cc2fe3ca2a712d3b14cc.jpg`, { responseType: 'arraybuffer' })
+
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '*MADE BY ALPHA-MD VERSION BOT*'  ,quoted: message.data})
+    
+    }));
+		}
+		break
 		case 'alpha': {
             	GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
 *╭─「 ᴀʟᴘʜᴀ ᴍᴅ ᴍᴇɴᴜ」*
