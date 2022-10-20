@@ -3375,13 +3375,24 @@ reply("Success Changing Menu To "+q)
 *◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*
 *◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*
 *◉ɢɪᴛʜᴜʙ ʟɪɴᴋ :►https://github.com/MrTimax/ALPHA-MD*
-*◉ʀᴜɴ ᴛɪᴍᴇ :► ${runtime(process.uptime())}
-  
-  *ᴛʏᴘᴇ .ᴀʟᴘʜᴀ ᴛᴏ ɢᴇᴛ ᴀʟᴘʜᴀ ʙᴏᴛ ᴍᴇɴᴜ*
+*◉ʀᴜɴ ᴛɪᴍᴇ :► ${runtime(process.uptime())}*
+*◉sᴘᴇᴇᴅ :► ${latensie.toFixed(4)} miliseconds*
+*◉ᴘʟᴜɢɪɴ ᴄʀᴇᴀᴛᴏʀ :► ᴍʀ.ᴛɪᴍᴀ*
 
 ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞` 
  }, { quoted: m })
             }
+		break
+		case 'admin': {
+                reply(`*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴄʟᴇᴀʀ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය ඔබේ චැට් සියල්ල මකා දමයි\n\n*🍁vᴄᴏᴍᴍᴀɴᴅ: .ᴀᴅᴅ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමට + readmore + යමෙක් ඇඩ් කරයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴍᴜᴛᴇ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම නිශ්ශබ්ද කරයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴜɴᴍᴜᴛᴇ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් කතාබස් නැවත ලබා දෙයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴋɪᴄᴋ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමෙන් යමෙකු ඉවත් කරයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ɪɴᴠɪᴛᴇ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් ලින්කුව ලබා දෙයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ʀᴜʟᴇʀs\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ නීති පෙන්වයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴘʀᴏᴍᴏᴛᴇ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු උසස් කරයි\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴅᴇᴍᴏᴛᴇ\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු පහත හෙලයි*`)
+            }
+		break
+	case 'antispam': {
+       GojoMdNx.sendMessage(from, { text: `A\nn\nt\ni\ns\np\na\nm\n\n\nA\nL\nP\nH\nA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\* ALPHA*` }, { quoted: m})
+       GojoMdNx.sendMessage(from, { text: `A\nn\nt\ni\ns\np\na\nm\n\n\nA\nL\nP\nH\nA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\* ALPHA*` }, { quoted: m})
+        }
+            break
+         
 		break
                      case 'alivexx': case 'botxx':{
                            	timestampe = speed();
@@ -3541,50 +3552,50 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 *│🛡️ᴀʟᴘʜᴀ ᴍᴀɪɴ ᴄᴏᴍᴍᴀɴᴅs*
  │   ───────
  │
- │► ${prefix}ᴀʟɪᴠᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ sᴛᴀᴛᴜs]
- │► ${prefix}ʙᴏᴛ [ᴄʜᴀᴛ ᴡɪᴛʜ ʙᴏᴛ]
- │► ${prefix}ᴀᴅᴍɪɴ [ᴀʟᴘʜᴀ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅs]
- │► ${prefix}sᴇᴛᴛɪɴɢs [ᴄʜᴀɴɢᴇ ʙᴏᴛ ʜᴇʀᴏᴋᴜ]
- │► ${prefix}ᴜᴘᴅᴀᴛᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs]
- │► ${prefix}ᴜᴘᴅᴀᴛᴇ ɴᴏᴡ [ɢᴇᴛ ᴜᴘᴅᴀᴛᴇs]
- │► ${prefix}ʀᴇsᴛᴀʀᴛ [ʀᴇsᴛᴀʀᴛ ʙᴏᴛ] 
+ │▷ ${prefix}ᴀʟɪᴠᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ sᴛᴀᴛᴜs]
+ │▷ ${prefix}ʙᴏᴛ [ᴄʜᴀᴛ ᴡɪᴛʜ ʙᴏᴛ]
+ │▷ ${prefix}ᴀᴅᴍɪɴ [ᴀʟᴘʜᴀ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅs]
+ │▷ ${prefix}sᴇᴛᴛɪɴɢs [ᴄʜᴀɴɢᴇ ʙᴏᴛ ʜᴇʀᴏᴋᴜ]
+ │▷ ${prefix}ᴜᴘᴅᴀᴛᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs]
+ │▷ ${prefix}ᴜᴘᴅᴀᴛᴇ ɴᴏᴡ [ɢᴇᴛ ᴜᴘᴅᴀᴛᴇs]
+ │▷ ${prefix}ʀᴇsᴛᴀʀᴛ [ʀᴇsᴛᴀʀᴛ ʙᴏᴛ] 
  ╰────────────••‣
  ╭────────────••‣
  *│💰ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴍᴀɴᴅs*
  │      ────────
- │► ${prefix}ᴠɪᴅᴇᴏ [ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏs]
- │► ${prefix}sᴏɴɢ [ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ sᴏɴɢs]
- │► ${prefix}ɪᴍɢ
- │► ${prefix}ғʙ 
- │► ${prefix}ᴛɪᴋᴛᴏᴋ
- │► ${prefix}ᴍᴇᴅɪᴀғɪʀᴇ
+ │▷ ${prefix}ᴠɪᴅᴇᴏ [ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏs]
+ │▷ ${prefix}sᴏɴɢ [ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ sᴏɴɢs]
+ │▷ ${prefix}ɪᴍɢ
+ │▷ ${prefix}ғʙ 
+ │▷ ${prefix}ᴛɪᴋᴛᴏᴋ
+ │▷ ${prefix}ᴍᴇᴅɪᴀғɪʀᴇ
  ╰────────────••‣
  ╭────────────••‣
  *│🛸ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅs*
  │  ─────────
- │► ${prefix}ʀᴇɴᴀᴍᴇ [ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴘ ɴᴀᴍᴇ]
- │► ${prefix}ᴛᴀɢᴀᴅᴍɪɴ 
- │► ${prefix}ᴄʟᴇᴀʀ
- │► ${prefix}ʀᴇᴘᴏʀᴛ
- │► ${prefix}ᴛᴀɢᴀʟʟ  
- │► ${prefix}ᴀᴅᴅ 
- │► ${prefix}ᴘʀᴏᴍᴏᴛᴇ
- │► ${prefix}ᴅᴇᴍᴏᴛᴇ 
- │► ${prefix}ɪɴᴠɪᴛᴇ [ɢᴇᴛ ɢʀᴏᴜᴘ ʟɪɴᴋ] 
- │► ${prefix}ᴋɪᴄᴋᴍᴇ
+ │▷ ${prefix}ʀᴇɴᴀᴍᴇ [ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴘ ɴᴀᴍᴇ]
+ │▷ ${prefix}ᴛᴀɢᴀᴅᴍɪɴ 
+ │▷ ${prefix}ᴄʟᴇᴀʀ
+ │▷ ${prefix}ʀᴇᴘᴏʀᴛ
+ │▷ ${prefix}ᴛᴀɢᴀʟʟ  
+ │▷ ${prefix}ᴀᴅᴅ 
+ │▷ ${prefix}ᴘʀᴏᴍᴏᴛᴇ
+ │▷ ${prefix}ᴅᴇᴍᴏᴛᴇ 
+ │▷ ${prefix}ɪɴᴠɪᴛᴇ [ɢᴇᴛ ɢʀᴏᴜᴘ ʟɪɴᴋ] 
+ │▷ ${prefix}ᴋɪᴄᴋᴍᴇ
  ╰───────────••‣
  ╭───────────••‣
  *│🎭ᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅs*
  │      ───────
- │► ${prefix}ᴡᴀʟʟᴘᴀᴘᴇʀ [+15 ᴡᴀʟʟᴘᴀᴘᴇʀs]
- │► ${prefix}ғғᴘᴀᴄᴋ [ᴄʀᴇᴀᴛᴇ ғғ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
- │► ${prefix}ᴛᴇxᴛɪᴍɢ [ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
- │► ${prefix}sᴛɪᴄᴋᴇʀᴘᴀᴄᴋ [ɢᴇᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ]
+ │▷ ${prefix}ᴡᴀʟʟᴘᴀᴘᴇʀ [+15 ᴡᴀʟʟᴘᴀᴘᴇʀs]
+ │▷ ${prefix}ғғᴘᴀᴄᴋ [ᴄʀᴇᴀᴛᴇ ғғ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
+ │▷ ${prefix}ᴛᴇxᴛɪᴍɢ [ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
+ │▷ ${prefix}sᴛɪᴄᴋᴇʀᴘᴀᴄᴋ [ɢᴇᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ]
  ╰───────────••‣
  ╭───────────••‣
  *│⚙️ʙᴏᴛ sᴇᴛᴛɪɴɢs*
  │    ───────
- │► ᴛʏᴘᴇ .sᴇᴛᴛɪɴɢs ғᴏʀ ɢᴇᴛ ʙᴏᴛ sᴇᴛᴛɪɴɢ ᴍᴇɴᴜ
+ │▷ ᴛʏᴘᴇ .sᴇᴛᴛɪɴɢs ғᴏʀ ɢᴇᴛ ʙᴏᴛ sᴇᴛᴛɪɴɢ ᴍᴇɴᴜ
  │    
  │   ᴛʜᴀɴᴋ ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ💕  
  │
