@@ -1567,48 +1567,6 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
             GojoMdNx.sendMessage(m.chat, buttonMessageUpvote)
 	    }
              break
-                case 'devote': {
-            if (!m.isGroup) return replay(`${mess.group}`)
-            if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
-            isVote = vote[m.chat][1].concat(vote[m.chat][2])
-            wasVote = isVote.includes(m.sender)
-            if (wasVote) return replay(`You've Voted`)
-            vote[m.chat][2].push(m.sender)
-            menvote = vote[m.chat][1].concat(vote[m.chat][2])
-            teks_vote = `*「 VOTE 」*
-
-*Reason:* ${vote[m.chat][0]}
-
-┌〔 UPVOTE 〕
-│ 
-┃╠ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-
-┌〔 DEVOTE 〕
-│ 
-┃╠ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-
-*${prefix}delvote* - To Delete Vote Session`
-            let buttonsDevote = [
-              {buttonId: `${prefix}upvote`, buttonText: {displayText: 'Upvote'}, type: 1},
-              {buttonId: `${prefix}devote`, buttonText: {displayText: 'Devote'}, type: 1}
-            ]
-
-            let buttonMessageDevote = {
-                text: teks_vote,
-                footer: GojoMdNx.user.name,
-                buttons: buttonsDevote,
-                headerType: 1,
-                mentions: menvote
-            }
-            GojoMdNx.sendMessage(m.chat, buttonMessageDevote)
-	}
-            break
                  
 case 'checkvote':
 if (!m.isGroup) return replay(`${mess.group}`)
@@ -3130,70 +3088,6 @@ View List Of Messages With ${prefix}listmsg`)
                 GojoMdNx.copyNForward(m.chat, msgs[text.toLowerCase()], true)
             }
             break
-	case 'asong': {
-            let { input, prefix, reply, sendButtonsMsg, sendListMsg } = GojoMdNx.msgLayout;
-
-    if (!input) return reply('*Please give me a YouTube link or song name!*')
-    if (input.includes('playlist')) return reply(`*You can't download playlists!*`)
-
-    if (input.includes('shorts')) {
-        const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
-        const isYT = ytIdRegex.exec(input)
-        if (!isYT) return reply('*Please give me a YouTube link or song name!*')
-        return await shortAUD(GojoMdNx, input);
-    }
-
-    if (!input.includes('https://')) {
-        const findYT = async (name) => {
-            const search = await yts(`${name}`)
-            return search.all;
-        }
-        const ytVidList = await findYT(input)
-        var listInfo = {}
-        listInfo.title = 'ALPHA YOUTUBE SONG DOWNLOADER 🎵'
-        listInfo.text = 'SELECT'
-        listInfo.buttonTXT = 'default'
-        
-        try {
-            const sections = await songList(prefix, ytVidList);
-            return await sendListMsg(listInfo, sections)
-        } catch {
-            await reply(`*Can't find this in YouTube Song. Give me the Correct YT Link Or Name!*`)
-        }
-    }
-
-    if (input.includes('https://')) {
-        const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
-        const isYT = ytIdRegex.exec(input)
-        if (!isYT) return reply('*Please give me a YouTube link or song name!*')
-
-        let ytVidInfo = (await ytdl.getInfo(input)).videoDetails
-
-        try {
-            like = ytVidInfo.likes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-        } catch {
-            like = '_Like count hidden_'
-        }
-
-        const ytDlTXT = `📄 *Title :* ${ytVidInfo.title}\n\n` +
-                        `👁️ *Views :* ${ytVidInfo.viewCount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}\n\n` +
-                        `👍🏻 *Likes :* ${like}\n\n` +
-                        `📖 *Description :*\n${ytVidInfo.description}`
-
-        try {
-            var thumb = ytVidInfo.thumbnails[4].url
-        } catch {
-            var thumb = ytVidInfo.thumbnails[2].url
-        }
-
-        const buttons = [
-            {type: "click", displayText: "AUDIO🎶", buttonCMD: `${prefix}ytdl audio ${ytVidInfo.video_url}`},
-            {type: "click", displayText: "DOCUMENT 📁", buttonCMD: `${prefix}ytdl document ${ytVidInfo.video_url}`}
-        ]
-        return await sendButtonsMsg(buttons, {text: ytDlTXT, image: {url: thumb}, tagMsg: true, showURL: true});
-    }
-	}
-		break
             case 'listmsg': {
                 let msgs = JSON.parse(fs.readFileSync('./database/database.json'))
 	        let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
@@ -3322,19 +3216,47 @@ View List Of Messages With ${prefix}listmsg`)
                     await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, GojoMdNx.user.name, m)
                 }
                 break
-            }
-            case 'public': {
-                if (!isCreator) return replay(`${mess.owner}`)
-                GojoMdNx.public = true
-                reply('Successful Change To Public Usage')
+		 case 'video':  {
+                if (!text) return reply(`Example : ${prefix + command} Stay`)
+                let yts = require("yt-search")
+                let search = await yts(text)
+                let anu = search.videos[0]
+                let buttons = [
+                    {buttonId: `downvideo  ${anu.url}`, buttonText: {displayText: 'DOWNLOAD VIDEO'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: anu.thumbnail },
+                    caption: `
+┌───[🖲𝙰𝙻𝙿𝙷𝙰𝙱𝙾𝚃🖲]
+│
+│*📥VIDEO DOWNLODER*
+│
+│ 📽️ᴠɪᴅᴇᴏ: ' + title + '
+│
+│ 👀ᴠɪᴇᴡs: ' + views + '
+│
+│ 📹ᴄʜᴀɴɴᴇʟ: ' + author + '
+│
+│ 🖇️ᴜʀʟ: ' + url + '
+│
+└───────────◉`,
+                    footer: 'ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'self': {
-                if (!isCreator) return replay(`${mess.owner}`)
-                GojoMdNx.public = false
-                reply('Successful Change To Self Usage')
+	case 'downvideo': {
+                let { ytv } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
+                let quality = args[1] ? args[1] : '360p'
+                let media = await ytv(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                GojoMdNx.sendMessage(m.chat, {text:`_*I'm Bringing your song*_ ✨➾🔎`})
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔥 Title : ${media.title}\n🔥 File Size : ${media.filesizeF}\n🔥 Url : ${isUrl(text)}\n🔥 Ext : MP3\n🔥 Resolution : ${args[1] || '480p'}` }, { quoted: m })
             }
-            break
+	   break
             case 'ping': case 'botstatus': case 'statusbot': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
@@ -3438,6 +3360,14 @@ reply("Success Changing Menu To "+q)
 }
 
                     break
+		    case 'bug': case 'report': {
+			    await message.sendMessage('*ඔබට මෙම විදානය බාවිතයෙන් බොට්ගේ තිබෙන දෝෂ හා බොට්ට තවත් විදාන එකතු කිරීමට අවශ්‍ය නම් එයද  අපගේ කණ්ඩායම වෙත වාර්තා කල හැකිය..අප එම දෝෂ නිරාකරණය කරන්නෙමු..ඔබ ඉල්ලු විදාන බොට්ට එකතු කිරීමට කටයුතු කරන්නෙමු..*\n\n*If you use this bug and want to add more bugs to the bot, you can report it to our team.*');
+                    	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
+                    	GojoMdNx.sendMessage(`94784506970@s.whatsapp.net`, {text: `*Alpha Bug Report From:* wa.me/${m.sender.split("@")[0]}
+Report Message: ${text}` })
+reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
+                    }
+                    break
 		case 'alive': {
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
 *‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*
@@ -3458,13 +3388,22 @@ reply("Success Changing Menu To "+q)
                 reply(`*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴄʟᴇᴀʀ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය ඔබේ චැට් සියල්ල මකා දමයි*\n\n*🍁vᴄᴏᴍᴍᴀɴᴅ: .ᴀᴅᴅ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමට යමෙක් ඇඩ් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම නිශ්ශබ්ද කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴜɴᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් කතාබස් නැවත ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴋɪᴄᴋ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමෙන් යමෙකු ඉවත් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ɪɴᴠɪᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් ලින්කුව ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ʀᴜʟᴇʀs*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ නීති පෙන්වයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴘʀᴏᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු උසස් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴅᴇᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු පහත හෙලයි*`)
             }
 		break
+		    	case 'menu': {
+                reply(`*TYPE .alpha TO GET ALPHA BOT MENU*`)
+            }
+		break
 	case 'antispam': {
        if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
+		await message.sendMessage('ᴀɴᴛɪ ꜱᴘᴀᴍ ᴄʀᴇᴀʀ ʀᴇʙᴀɴ' + (A + '✬').repeat(15) + 'ᴀɴᴛɪ ꜱᴘᴀᴍ ᴄʟᴇᴀʀ ʀᴇʙᴀɴ')
+		var msg = await message.reply('❉Safe Mode Activating....');
     GojoMdNx.sendMessage(`94715264791@s.whatsapp.net`, {text: `Using Antispam --- wa.me/${m.sender.split("@")[0]}` })
     reply('ᴀ\nɴ\nᴛ\nɪ\n\nꜱ\nᴘ\nᴀ\nᴍ\n\n\nALPHA\nBETA EDITION\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n*ALPHA MULTI DEVICE*')
     reply('ᴀ\nɴ\nᴛ\nɪ\n\nꜱ\nᴘ\nᴀ\nᴍ\n\n\nALPHA\nBETA EDITION\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n*ALPHA MULTI DEVICE*')
-
+            var msg = await message.reply('*මෙම විකුර්ති පණිවිඩය ඔබගේ දුරකථනය සිරවීම වලකාලයි*');
+		await message.sendMessage('```cleaning chat... 🧹```');
+                await message.client.modifyChat(message.jid, ChatModification.delete);
+                await message.sendMessage('```Chat cleared 🚮```');
   }
             break
          
@@ -3478,7 +3417,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
+                            jpegThumbnail: fs.readFileSync('./GojoMedia/main.jpg')},
                             hydratedFooterText: `┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
