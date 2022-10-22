@@ -3526,6 +3526,15 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
+	case 'ping': {
+		 const start = new Date().getTime();
+    await message.sendMessage("ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ..");
+    const end = new Date().getTime();
+    return await message.sendMessage(
+      "*RESPONSE IN*\n ```" + (end - start) + "``` *MS*"
+    );
+	}
+		break
 		case 'alpha': {
             	GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
 *╭─「 ᴀʟᴘʜᴀ ᴍᴅ ᴍᴇɴᴜ」*
