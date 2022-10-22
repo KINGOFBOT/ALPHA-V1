@@ -20,6 +20,14 @@
             "required": true,
             "value":"Achi Frenando"
         },
+       "HEROKU_API_KEY": {
+        "description": "",
+        "required": true
+      },
+      "HEROKU_APP_NAME": {
+        "description": "",
+        "required": true
+      },
         "BOT_NAME": {
             "description": "",
             "required": true,
