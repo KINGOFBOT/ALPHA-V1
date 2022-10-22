@@ -4,21 +4,64 @@
   "repository": "https://github.com/TimashaBuddilax/ALPHA-MD",
   "logo": "https://telegra.ph/file/f3b0b4e681583334b7330.jpg",
   "keywords": ["nodejs", "bot", "md whatsapp bot", "whatsapp automation", "multi device"],
-   "env": { 
-     "BOT_NAME": {
+     "env": { 
+        "ALIVE_MASSAGE": {
             "description": "",
             "required": false,
             "value":""
         },
-  "buildpacks": [
+        "OWNER_NUMBER": {
+            "description": "",
+            "required": true,
+            "value":"94784506970"
+        },
+        "OWNER_NAME": {
+            "description": "",
+            "required": true,
+            "value":"Achi Frenando"
+        },
+        "BOT_NAME": {
+            "description": "",
+            "required": true,
+            "value":"ALPHA-MD"
+        },
+       "STICKER_PACKAGE": {
+            "description": "",
+            "required": true,
+            "value":"ALPHA-MD"
+        },
+        "SESSION_NAME": {
+            "description": "",
+            "required": true,
+            "value":"session"
+        },
+        "SONG_DOWNLOAD": {
+            "description": "",
+            "required": true,
+            "value":"_*I'm Searching your song*_ ✨➾🔎"
+        },
+        "SOND_UPLOAD": {
+            "description": "",
+            "required": true,
+            "value":"_*I'm Uploading your song*_ ✨➾🎲"
+        },
+        "VIDEO_DOWNLOAD": {
+            "description": "",
+            "required": true,
+            "value":"_*I'm Bringing your song*_ ✨➾🔎"
+        },
+         "VIDEO_UPLOAD": {
+            "description": "",
+            "required": true,
+            "value":"_*I'm Uploading your song*_ ✨➾🎲"
+        }
+   },
+    "buildpacks": [
     {
       "url": "heroku/nodejs"
     },
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
     },
     {
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
