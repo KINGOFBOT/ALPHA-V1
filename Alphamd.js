@@ -3130,6 +3130,70 @@ View List Of Messages With ${prefix}listmsg`)
                 GojoMdNx.copyNForward(m.chat, msgs[text.toLowerCase()], true)
             }
             break
+	case 'asong': {
+            let { input, prefix, reply, sendButtonsMsg, sendListMsg } = GojoMdNx.msgLayout;
+
+    if (!input) return reply('*Please give me a YouTube link or song name!*')
+    if (input.includes('playlist')) return reply(`*You can't download playlists!*`)
+
+    if (input.includes('shorts')) {
+        const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
+        const isYT = ytIdRegex.exec(input)
+        if (!isYT) return reply('*Please give me a YouTube link or song name!*')
+        return await shortAUD(GojoMdNx, input);
+    }
+
+    if (!input.includes('https://')) {
+        const findYT = async (name) => {
+            const search = await yts(`${name}`)
+            return search.all;
+        }
+        const ytVidList = await findYT(input)
+        var listInfo = {}
+        listInfo.title = 'ALPHA YOUTUBE SONG DOWNLOADER 🎵'
+        listInfo.text = 'SELECT'
+        listInfo.buttonTXT = 'default'
+        
+        try {
+            const sections = await songList(prefix, ytVidList);
+            return await sendListMsg(listInfo, sections)
+        } catch {
+            await reply(`*Can't find this in YouTube Song. Give me the Correct YT Link Or Name!*`)
+        }
+    }
+
+    if (input.includes('https://')) {
+        const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
+        const isYT = ytIdRegex.exec(input)
+        if (!isYT) return reply('*Please give me a YouTube link or song name!*')
+
+        let ytVidInfo = (await ytdl.getInfo(input)).videoDetails
+
+        try {
+            like = ytVidInfo.likes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        } catch {
+            like = '_Like count hidden_'
+        }
+
+        const ytDlTXT = `📄 *Title :* ${ytVidInfo.title}\n\n` +
+                        `👁️ *Views :* ${ytVidInfo.viewCount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}\n\n` +
+                        `👍🏻 *Likes :* ${like}\n\n` +
+                        `📖 *Description :*\n${ytVidInfo.description}`
+
+        try {
+            var thumb = ytVidInfo.thumbnails[4].url
+        } catch {
+            var thumb = ytVidInfo.thumbnails[2].url
+        }
+
+        const buttons = [
+            {type: "click", displayText: "AUDIO🎶", buttonCMD: `${prefix}ytdl audio ${ytVidInfo.video_url}`},
+            {type: "click", displayText: "DOCUMENT 📁", buttonCMD: `${prefix}ytdl document ${ytVidInfo.video_url}`}
+        ]
+        return await sendButtonsMsg(buttons, {text: ytDlTXT, image: {url: thumb}, tagMsg: true, showURL: true});
+    }
+	}
+		break
             case 'listmsg': {
                 let msgs = JSON.parse(fs.readFileSync('./database/database.json'))
 	        let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
