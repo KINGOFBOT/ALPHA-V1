@@ -1,54 +1,18 @@
-  "name": "ALPHA MULTI DEVICE",
-  "description": "whatsapp md bot build with nodejs",
-  "avatar": "https://telegra.ph/file/7a19c6eceee6068ac5094.jpg'",
-  "repository": "https://github.com/TimashaBuddilax/ALPHA---MD",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
-   "env": { 
-      "HEROKU_APP_NAME": {
-        "description": "",
-        "required": true
-      },
-        "BOT_NAME": {
-            "description": "",
-            "required": true,
-            "value":"ALPHA MD BOT"
-        },
-       "STICKER_PACKAGE": {
-            "description": "",
-            "required": true,
-            "value":"ALPHA"
-        },
-        "SESSION_NAME": {
-            "description": "",
-            "required": true,
-            "value":"session"
-        },
-        "SONG_DOWNLOAD": {
-            "description": "",
-            "required": true,
-            "value":"_*I'm Searching your song*_"
-        },
-        "SOND_UPLOAD": {
-            "description": "",
-            "required": true,
-            "value":"_*I'm Uploading your song*_"
-        },
-        "VIDEO_DOWNLOAD": {
-            "description": "",
-            "required": true,
-            "value":"_*I'm Bringing your song*_"
-        },
-         "VIDEO_UPLOAD": {
-            "description": "",
-            "required": true,
-            "value":"_*I'm Uploading your song*_"
-        }
-       "buildpacks": [
+{
+  "name": " ᴀʟᴘʜᴀ ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ",
+  "description": "Whatsapp MD  Bot build with nodejs",
+  "repository": "https://github.com/TimashaBuddilax/ALPHA-MD",
+  "logo": "https://telegra.ph/file/f3b0b4e681583334b7330.jpg",
+  "keywords": ["nodejs", "bot", "md whatsapp bot", "whatsapp automation", "multi device"],
+  "buildpacks": [
     {
       "url": "heroku/nodejs"
     },
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
     },
     {
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
@@ -58,3 +22,6 @@
         "worker": {
             "quantity": 1,
             "size": "free"
+        }
+    }
+}
