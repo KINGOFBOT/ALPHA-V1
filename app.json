@@ -4,6 +4,12 @@
   "repository": "https://github.com/TimashaBuddilax/ALPHA-MD",
   "logo": "https://telegra.ph/file/f3b0b4e681583334b7330.jpg",
   "keywords": ["nodejs", "bot", "md whatsapp bot", "whatsapp automation", "multi device"],
+   "env": { 
+     "BOT_NAME": {
+            "description": "",
+            "required": false,
+            "value":""
+        },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
