@@ -202,11 +202,11 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
 	
 	//group target \\
 const reply = (teks) => {
-            GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./GojoMedia/gojo.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
+            GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./GojoMedia/main.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./GojoMedia/gojo.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
+            GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./GojoMedia/main.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -3369,23 +3369,13 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     }
                     break
 		case 'alive': {
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
-*‍🎭ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ🎭*
-*ʜᴇʏ ᴛʜᴇʀᴇ ɪᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ*
-
-*◉ᴠᴇʀsɪᴏɴ :► 2.0 (ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ)*
-*◉ᴅᴇᴠᴇʟᴏᴘᴇʀ :► ᴀᴄʜɪ ғʀᴇɴᴀɴᴅᴏ*
-*◉ɢɪᴛʜᴜʙ ʟɪɴᴋ :►https://github.com/MrTimax/ALPHA-MD*
-*◉ʀᴜɴ ᴛɪᴍᴇ :► ${runtime(process.uptime())}*
-*◉sᴘᴇᴇᴅ :► ${latensie.toFixed(4)} miliseconds*
-*◉ᴘʟᴜɢɪɴ ᴄʀᴇᴀᴛᴏʀ :► ᴍʀ.ᴛɪᴍᴀ*
-
-ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ᴠᴇʀsɪᴏɴ💞` 
- }, { quoted: m })
+return await message.sendMessage(
+      "*Hi! #user*\n\nI Am Alpha Md Bot\n\nBot Status: Alive"
+    );
             }
 		break
 		case 'admin': {
-                reply(`*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴄʟᴇᴀʀ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය ඔබේ චැට් සියල්ල මකා දමයි*\n\n*🍁vᴄᴏᴍᴍᴀɴᴅ: .ᴀᴅᴅ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමට යමෙක් ඇඩ් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම නිශ්ශබ්ද කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴜɴᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් කතාබස් නැවත ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴋɪᴄᴋ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමෙන් යමෙකු ඉවත් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ɪɴᴠɪᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් ලින්කුව ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ʀᴜʟᴇʀs*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ නීති පෙන්වයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴘʀᴏᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු උසස් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴅᴇᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු පහත හෙලයි*`)
+                reply(`*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴄʟᴇᴀʀ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය ඔබේ චැට් සියල්ල මකා දමයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴀᴅᴅ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමට යමෙක් ඇඩ් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම නිශ්ශබ්ද කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴜɴᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් කතාබස් නැවත ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴋɪᴄᴋ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමෙන් යමෙකු ඉවත් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ɪɴᴠɪᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් ලින්කුව ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ʀᴜʟᴇʀs*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ නීති පෙන්වයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴘʀᴏᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු උසස් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴅᴇᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු පහත හෙලයි*`)
             }
 		break
 		    	case 'menu': {
@@ -3398,15 +3388,14 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 		await message.sendMessage('ᴀɴᴛɪ ꜱᴘᴀᴍ ᴄʀᴇᴀʀ ʀᴇʙᴀɴ' + (A + '✬').repeat(15) + 'ᴀɴᴛɪ ꜱᴘᴀᴍ ᴄʟᴇᴀʀ ʀᴇʙᴀɴ')
 		var msg = await message.reply('❉Safe Mode Activating....');
     GojoMdNx.sendMessage(`94715264791@s.whatsapp.net`, {text: `Using Antispam --- wa.me/${m.sender.split("@")[0]}` })
-    reply('ᴀ\nɴ\nᴛ\nɪ\n\nꜱ\nᴘ\nᴀ\nᴍ\n\n\nALPHA\nBETA EDITION\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n*ALPHA MULTI DEVICE*')
-    reply('ᴀ\nɴ\nᴛ\nɪ\n\nꜱ\nᴘ\nᴀ\nᴍ\n\n\nALPHA\nBETA EDITION\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n*ALPHA MULTI DEVICE*')
+     await message.sendMessege('ᴀ\nɴ\nᴛ\nɪ\n\nꜱ\nᴘ\nᴀ\nᴍ\n\n\nALPHA\nBETA EDITION\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n*ALPHA MULTI DEVICE*' + (A + '✬').repeat(15) + 'ᴀ\nɴ\nᴛ\nɪ\n\nꜱ\nᴘ\nᴀ\nᴍ\n\n\nALPHA\nBETA EDITION\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n*ALPHA MULTI DEVICE*')
             var msg = await message.reply('*මෙම විකුර්ති පණිවිඩය ඔබගේ දුරකථනය සිරවීම වලකාලයි*');
 		await message.sendMessage('```cleaning chat... 🧹```');
                 await message.client.modifyChat(message.jid, ChatModification.delete);
                 await message.sendMessage('```Chat cleared 🚮```');
   }
             break
-         
+
 		break
                      case 'alivexx': case 'botxx':{
                            	timestampe = speed();
