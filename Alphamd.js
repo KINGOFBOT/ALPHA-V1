@@ -2203,7 +2203,8 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
              if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-online-980.html'
                 if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
              let anu = await maker.textpro(link, q)
-                GojoMdNx.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.botname},For my Darling ` }, { quoted: m })
+	     return await message.sendMessage("*CREATING YOUR LOGO...PLEASE WAIT...*");
+                GojoMdNx.sendMessage(m.chat, { image: { url: anu }, caption: `*MADE BY ALPHA MULTI DEVICE BOT*` }, { quoted: m })
              }
              break
             case 'drakorxxx':
@@ -3253,11 +3254,12 @@ View List Of Messages With ${prefix}listmsg`)
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, {text:`_*I'm Bringing your song*_ ✨➾🔎`})
+                GojoMdNx.sendMessage(m.chat, {text:`_*I'm Bringing your video*_ ✨➾🔎`})
+		GojoMdNx.sendMessage(m.chat, {text:`_*I'm Uploading your video*_ ✨➾🔎`})
                 GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔥 Title : ${media.title}\n🔥 File Size : ${media.filesizeF}\n🔥 Url : ${isUrl(text)}\n🔥 Ext : MP3\n🔥 Resolution : ${args[1] || '480p'}` }, { quoted: m })
             }
 	   break
-            case 'ping': case 'botstatus': case 'statusbot': {
+             case 'botstatus': case 'statusbot': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
@@ -3369,9 +3371,24 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     }
                     break
 		case 'alive': {
-return await message.sendMessage(
-      "*Hi! #user*\n\nI Am Alpha Md Bot\n\nBot Status: Alive"
-    );
+let buttons = [
+                    {buttonId: `alphasysdinfo`, buttonText: {displayText: 'SYSTEM INFO'}, type: 1},
+                    {buttonId: `supportgrp`, buttonText: {displayText: 'SUPPORT GROUP'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' },
+                    caption: `
+👋 ʜɪ ᴛʜᴇʀᴇ ɪ ᴀᴍ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ
+   *ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌞 ${pushname}*
+  
+  ᴅᴇᴠᴇʟᴏᴘᴇʀ : *ᴀᴄʜɪ ғʀᴇɴᴀᴅᴏ*
+  ᴠᴇʀsɪᴏɴ : *2.0.0 (ᴄᴏᴍɪɴɢ sᴏᴏɴ)*
+  ᴘʟᴀᴛғᴏʀᴍ : *ʟɪɴᴜx*`,
+                    footer: 'ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
 		break
 		case 'admin': {
@@ -3539,7 +3556,14 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 	}
 		break
 		case 'alpha': {
-            	GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' }, caption: `
+		    let buttons = [
+                    {buttonId: `admin`, buttonText: {displayText: 'ADMIN ONLY COMMANDS'}, type: 1},
+	            {buttonId: `alphasysdinfo`, buttonText: {displayText: 'SYSTEM INFO'}, type: 1},
+                    {buttonId: `newfeatures`, buttonText: {displayText: 'NEW FEATURES'}, type: 1}
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' },
+                    caption: `
 *╭─「 ᴀʟᴘʜᴀ ᴍᴅ ᴍᴇɴᴜ」*
  │
  ├─────────••‣
@@ -3601,134 +3625,98 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  │    
  │   ᴛʜᴀɴᴋ ғᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ💕  
  │
- ╰───────────••‣`
-}, { quoted: m })
-           }
+ ╰───────────••‣`,
+                    footer: 'ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
 		break
-		case 'command': {
+		case 'textimg': {
+			if (!text) return reply(`Example : ${prefix + command} textimg ALPHA`)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
-                    buttonText: "Menu",
-                    footerText: `${global.footer}`,
+                    title: `*RGB STICKER MAKER*\n\n*INPUT* :*(!text)*`,
+                    description: `┏━━━━━━━━━━━━━━━━━━━━━━━━━\n┃   *ALPHA MD BOT TEXTIMG PACK*\n┗━━━━━━━━━━━━━━━━━━━━━━━━━\n\n*⛲SELECT YOUR LOGO⛲*\n\n`,
+                    buttonText: "TEXTIMG",
+                    footerText: `ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Main Features",
+								"title": "🏆 RATE US!",
 								"rows": [
 									{
-										"title": "Main Menu",
-										"description": "Displays The List Of Main Features",
-										"rowId": `${prefix}mainmenu`
+										"title": "🏆 RATE US!",
+										"description": "",
+										"rowId": `${prefix}rate`
 									}
 								]
 							},
 							{
-								"title": "Bot Features",
+								"title": "TEXTIMG",
 								"rows": [
 									{
-										"title": "All Menu",
-										"description": "Displays The List Of All The Features!",
-										"rowId": `${prefix}allmenu`
+										"title": "3D GLUE TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}glue`
 									},
 									{
-										"title": "Owner Menu",
-										"description": "Displays The List Of Owner Features",
-										"rowId": `${prefix}ownermenu`
+										"title": "JOCKER LOGO",
+										"description": "",
+										"rowId": `${prefix}joker`
 										},
 									{
-										"title": "Group Menu",
-										"description": "Displays The List Of Main Features",
-										"rowId": `${prefix}groupmenu`
+										"title": "TOXIC TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}toxic`
 										},
 									{
-										"title": "Rpg Menu",
-										"description": "Displays The List Of Rpg Features",
-										"rowId": `${prefix}rpgmenu`
+										"title": "SNOW TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}snow`
 									},
 									{
-										"title": "Download Menu",
-										"description": "Displays The List Of Download Features",
-										"rowId": `${prefix}downloadmenu`
+										"title": "HARRY POTTER TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}harrypotter`
 									},
 									{
-										"title": "Search Menu",
-										"description": "Displays The List Of Searching Features",
-										"rowId": `${prefix}searchmenu`
+										"title": "3D STONE CRACKED COOL TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}3dstone`
 									},
 									{
-											"title": "Random Menu",
-										"description": "Displays The List Of Random Features",
-										"rowId": `${prefix}randommenu`
+											"title": "THUNDER TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}thunder`
 										},
 										{
-											"title": "Random Anime Menu",
-										"description": "Displays The List Of Random Anime Features",
-										"rowId": `${prefix}randomanimemenu`
+											"title": "3D SCI-FI TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}scifi`
 										},
 										{
-											"title": "Fun Menu",
-										"description": "Displays The List Of Fun Features",
-										"rowId": `${prefix}funmenu`
+											"title": "3D DEEP SEA METAL TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}deepsea`
 										},
 										{
-											"title": "Convert Menu",
-										"description": "Displays The List Of Convert Features",
-										"rowId": `${prefix}convertmenu`
+											"title": "MAGMA HOT TEXT EFFECT",
+										"description": "",
+										"rowId": `${prefix}magma`
 										},
-										{
-											"title": "Database Menu",
-										"description": "Displays The List Of Database Features",
-										"rowId": `${prefix}databasemenu`
-										},
-										{
-											"title": "Voice Changer Menu",
-										"description": "Displays The List Of Voice Changing Features",
-										"rowId": `${prefix}voicechangermenu`
-										},
-										{
-											"title": "TXT-to-IMG Menu",
-										"description": "Displays The List Of Textpro Features",
-										"rowId": `${prefix}textpromenu`
-										},
-										{
-											"title": "Islamic Menu",
-										"description": "Displays The List Of Islamic Features",
-										"rowId": `${prefix}islamicmenu`
-										},
-										{
-											"title": "Horoscope Menu",
-										"description": "Displays The List Of Horoscope Features",
-										"rowId": `${prefix}horoscopemenu`
-										}
+										
 								]
 							},
-							{
-								"title": "Chat With Fellow Users",
-								"rows": [
-									{
-										"title": "Anonymous Chat Menu",
-										"description": "Displays The List Of Anonymous Chat Features",
-										"rowId": `${prefix}anonymouschatmenu`
-									}
-								]
-							},
-							{
-								"title": "Credit",
-								"rows": [
-									{
-										"title": "Thanks To",
-										"description": "Displays The List Of Credit Of The Bot !!",
-										"rowId": `${prefix}tqtt`
-									}
-								]
-							}
+                               
+							
 						],
+							
           listType: 1
                 }
             }), {})
             GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
-            }
+            
             break
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': {
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `*Hi Bro ${m.pushName}*\nDonation section is currently down🥲 , I know you are happy but me 🥲💔\n` }, { quoted: m })
