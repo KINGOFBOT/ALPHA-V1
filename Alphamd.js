@@ -3378,12 +3378,19 @@ let buttons = [
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/7a19c6eceee6068ac5094.jpg' },
                     caption: `
-👋 ʜɪ ᴛʜᴇʀᴇ ɪ ᴀᴍ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ
-   *ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌞 ${pushname}*
+👋 *ʜɪ ᴛʜᴇʀᴇ ɪ ᴀᴍ ᴀʟᴘʜᴀ ᴍᴅ ʙᴏᴛ*
+   *ʜᴀᴠᴇ ᴀ ɴɪᴄᴇ ᴅᴀʏ🌞 ${pushname}*
   
-  ᴅᴇᴠᴇʟᴏᴘᴇʀ : *ᴀᴄʜɪ ғʀᴇɴᴀᴅᴏ*
-  ᴠᴇʀsɪᴏɴ : *2.0.0 (ᴄᴏᴍɪɴɢ sᴏᴏɴ)*
-  ᴘʟᴀᴛғᴏʀᴍ : *ʟɪɴᴜx*`,
+  *ᴅᴇᴠᴇʟᴏᴘᴇʀ* : *ᴀᴄʜɪ ғʀᴇɴᴀᴅᴏ*
+  *ᴠᴇʀsɪᴏɴ* : *2.0.0 (ᴄᴏᴍɪɴɢ sᴏᴏɴ)*
+  *ɢɪᴛʜᴜʙ* : *https://github.com/TimashaBuddilax/ALPHA-MD*
+  *sᴘᴇᴇᴅ* : *0.0137 ᴍɪʟɪsᴇᴄᴏɴᴅs*
+  *ʀᴜɴ ᴛɪᴍᴇ* : *${runtime(process.uptime())}*
+  *ᴘʟᴜɢɪɴ ᴄʀᴇᴀᴛᴏʀ* : *ᴍʀ.ᴛɪᴍᴀ*
+
+ *sʀɪ ʟᴀɴᴋᴀɴ ʙᴇsᴛ ᴍᴅ ᴜsᴇʀ ʙᴏᴛ*
+ 
+ ᴛʜᴀɴᴋs ꜰᴏʀ ᴜsɪɴɢ ᴀʟᴘʜᴀ💕`,
                     footer: 'ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ',
                     buttons: buttons,
                     headerType: 4
@@ -3392,7 +3399,7 @@ let buttons = [
             }
 		break
 		case 'admin': {
-                reply(`*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴄʟᴇᴀʀ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය ඔබේ චැට් සියල්ල මකා දමයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴀᴅᴅ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමට යමෙක් ඇඩ් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම නිශ්ශබ්ද කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴜɴᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් කතාබස් නැවත ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴋɪᴄᴋ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමෙන් යමෙකු ඉවත් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ɪɴᴠɪᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් ලින්කුව ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ʀᴜʟᴇʀs*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ නීති පෙන්වයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴘʀᴏᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු උසස් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴅᴇᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු පහත හෙලයි*`)
+                reply(`*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴄʟᴇᴀʀ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය ඔබේ චැට් සියල්ල මකා දමයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴀᴅᴅ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමට යමෙක් ඇඩ් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම නිශ්ශබ්ද කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴜɴᴍᴜᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් කතාබස් නැවත ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴋɪᴄᴋ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමෙන් යමෙකු ඉවත් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ɪɴᴠɪᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායම් ලින්කුව ලබා දෙයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ʀᴜʟᴇʀs*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ නීති පෙන්වයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴘʀᴏᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු උසස් කරයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴅᴇᴍᴏᴛᴇ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: එය කණ්ඩායමේ යමෙකු පහත හෙලයි*\n\n*🍁ᴄᴏᴍᴍᴀɴᴅ: .ᴀɴᴛɪsᴘᴀᴍ*\n*🍂ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: යමෙකු spam ඔබගේ group එකට යෙදුවොත් එය  විකුර්ති පණිවිඩයක් මගින් ඔබේ දුරකතනය සිරවීම වලකාලයි*`)
             }
 		break
 		    	case 'menu': {
@@ -3495,7 +3502,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')}, 
+                            jpegThumbnail: fs.readFileSync('./GojoMedia/main.jpg')}, 
                             hydratedFooterText: `
 ┌─❖
 │「 Hi 👋 」
@@ -3580,6 +3587,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  │
  │▷ ${prefix}ᴀʟɪᴠᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ sᴛᴀᴛᴜs]
  │▷ ${prefix}ʙᴏᴛ [ᴄʜᴀᴛ ᴡɪᴛʜ ʙᴏᴛ]
+ │▷ ${prefix}ʙᴜɢ [ᴛᴏ ʀᴇᴘᴏʀᴛ ʙᴏᴛ ᴅᴇꜰᴇᴄᴛs ᴛᴏ ᴜs]
  │▷ ${prefix}ᴀᴅᴍɪɴ [ᴀʟᴘʜᴀ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅs]
  │▷ ${prefix}sᴇᴛᴛɪɴɢs [ᴄʜᴀɴɢᴇ ʙᴏᴛ ʜᴇʀᴏᴋᴜ]
  │▷ ${prefix}ᴜᴘᴅᴀᴛᴇ [ᴄʜᴇᴄᴋ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs]
@@ -3596,6 +3604,12 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  │▷ ${prefix}ᴛɪᴋᴛᴏᴋ
  │▷ ${prefix}ᴍᴇᴅɪᴀғɪʀᴇ
  ╰────────────••‣
+ ╭───────────••‣
+ *│🎭ᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅs*
+ │      ───────
+ │▷ ${prefix}ᴛᴇxᴛɪᴍɢ [ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
+ │▷ ${prefix}sᴛɪᴄᴋᴇʀᴘᴀᴄᴋ [ɢᴇᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ]
+ ╰───────────••‣
  ╭────────────••‣
  *│🛸ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅs*
  │  ─────────
@@ -3609,14 +3623,6 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  │▷ ${prefix}ᴅᴇᴍᴏᴛᴇ 
  │▷ ${prefix}ɪɴᴠɪᴛᴇ [ɢᴇᴛ ɢʀᴏᴜᴘ ʟɪɴᴋ] 
  │▷ ${prefix}ᴋɪᴄᴋᴍᴇ
- ╰───────────••‣
- ╭───────────••‣
- *│🎭ᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅs*
- │      ───────
- │▷ ${prefix}ᴡᴀʟʟᴘᴀᴘᴇʀ [+15 ᴡᴀʟʟᴘᴀᴘᴇʀs]
- │▷ ${prefix}ғғᴘᴀᴄᴋ [ᴄʀᴇᴀᴛᴇ ғғ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
- │▷ ${prefix}ᴛᴇxᴛɪᴍɢ [ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ ɪɴ ʏᴏᴜʀ ɴᴀᴍᴇ]
- │▷ ${prefix}sᴛɪᴄᴋᴇʀᴘᴀᴄᴋ [ɢᴇᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ]
  ╰───────────••‣
  ╭───────────••‣
  *│⚙️ʙᴏᴛ sᴇᴛᴛɪɴɢs*
@@ -3722,8 +3728,68 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `*Hi Bro ${m.pushName}*\nDonation section is currently down🥲 , I know you are happy but me 🥲💔\n` }, { quoted: m })
             }
             break
-            case 'sc': case 'script': {
-                reply(`GitHub : https://github.com/nexusNw/Gojo-Satoru\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
+			case 'rateus': {
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `*ALPHA RATE*`,
+                    description: `\n┏━━━━━━━━━━━━━━━━\n┃  ❖❖ ALPHA RATINGS ❖❖\n┃\n┃  ✭✭✭✭✭ = {}\n┃  ✭✭✭✭✩ = {}\n┃  ✭✭✭✩✩ = {}\n┃  ✭✭✩✩✩ = {}\n┃  ✭✩✩✩✩ = {}\n┃\n┗━━━━━━━━━━━━━━━━`,
+                    buttonText: "🏆 RATE US!",
+                    footerText: `ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "🏆 RATE US!",
+								"rows": [
+									{
+										"title": "🏆 RATE US!",
+										"description": "",
+										"rowId": `${prefix}rate`
+									}
+								]
+							},
+							{
+								"title": "Give Me The Your Best Rating",
+								"rows": [
+									{
+										"title": "✭✭✭✭✭",
+										"description": "5 STAR RATE",
+										"rowId": `${prefix}ratemsg`
+									},
+									{
+										"title": "✭✭✭✭✩",
+										"description": "4 STAR RATE",
+										"rowId": `${prefix}ratemsg`
+										},
+									{
+										"title": "✭✭✭✩✩",
+										"description": "3 STAR RATE",
+										"rowId": `${prefix}ratemsg`
+										},
+									{
+										"title": "✭✭✩✩✩",
+										"description": "2 STAR RATE",
+										"rowId": `${prefix}ratemsg`
+									},
+									{
+										"title": "✭✩✩✩✩",
+										"description": "1 STAR RATE",
+										"rowId": `${prefix}ratemsg`
+									},
+									
+										
+								]
+							},
+                               
+							
+						],
+							
+          listType: 1
+                }
+            }), {})
+            GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
+				break
+            case 'ratemsg': {
+                        GojoMdNx.sendMessage(from, { text: `*Thank For Rate Us For Alpha Bot*` }, { quoted: m})
+
             }
             break
 case 'allmenu': {
