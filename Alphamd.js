@@ -3741,6 +3741,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 }
             }), {})
             GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
+			}
 				break
             case 'ratemsg': {
                         GojoMdNx.sendMessage(from, { text: `*Thank For Rate Us For Alpha Bot*` }, { quoted: m})
