@@ -15,6 +15,7 @@ global.APIKeys = {
 global.owner = ['94784506970']
 global.premium = ['94784506970']
 global.ownernomer = '94784506970'
+global.teamalpha = '94773585511'
 global.ownername = 'Achi Fernando'
 global.botname = 'ALPHA-MD'
 global.footer = 'ᴀʟᴘʜᴀ ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ'
