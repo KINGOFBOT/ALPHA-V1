@@ -3172,7 +3172,48 @@ View List Of Messages With ${prefix}listmsg`)
                     await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, GojoMdNx.user.name, m)
                 }
                 break
+		                   case 'song': {
+                if (!text) return reply(`Example : .song lelena`)
+                let yts = require("yt-search")
+                let search = await yts(text)
+                let alphamd = search.videos[0]
+                let buttons = [
+                    {buttonId: `downsong ${alphamd.url}`, buttonText: {displayText: 'DOWNLOAD SONG'}, type: 1},
+                 ]
+                let buttonMessage = {
+                    image: { url: alphamd.thumbnail },
+                    caption: `
+┌───[🖲𝙰𝙻𝙿𝙷𝙰𝙱𝙾𝚃🖲]
+│
+│*📥SONG DOWNLODER*
+│
+│ 📽️ᴠɪᴅᴇᴏ: ' + title + '
+│
+│ 👀ᴠɪᴇᴡs: ' + views + '
+│
+│ 📹ᴄʜᴀɴɴᴇʟ: ' + author + '
+│
+│ 🖇️ᴜʀʟ: ' + url + '
+│
+└───────────◉`,
+                    footer: 'ᴀʟᴘʜᴀ ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
+		    break
+		     case 'downsong':  {
+              let { ytv } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
+                let quality = args[1] ? args[1] : '360p'
+                let media = await ytv(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                GojoMdNx.sendMessage(m.chat, {text:`_*I'm Bringing your song*_ ✨➾🔎`})
+		GojoMdNx.sendMessage(m.chat, {text:`_*I'm Uploading your song*_ ✨➾🔎`})
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🔥 Title : ${media.title}\n🔥 File Size : ${media.filesizeF}\n🔥 Url : ${isUrl(text)}\n🔥 Ext : MP3\n🔥 Resolution : ${args[1] || '480p'}` }, { quoted: m })
+            }
+                       break
 		 case 'video':  {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
@@ -3376,6 +3417,12 @@ let buttons = [
   }
 
 		break
+		    case 'supportgrp': {
+			 if (!isCreator) return replay(`${mess.owner}`)
+			    await message.sendMessage('*ᴊᴏɪɴ ᴀʟᴘʜᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ*' + (A + '👏').repeat(2) + '*ᴊᴏɪɴ ᴀʟᴘʜᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ*')
+			    await message.sendMessage('```https://chat.whatsapp.com/LVcesN2nXc2LI8iLjGZiVE```');
+		    }
+		    break
                      case 'alivexx': case 'botxx':{
                            	timestampe = speed();
 latensie = speed() - timestampe
