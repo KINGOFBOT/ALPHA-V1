@@ -3132,45 +3132,6 @@ View List Of Messages With ${prefix}listmsg`)
                 delete this.anonymous[room.id]
                 if (command === 'leave') break
             }
-            case 'mulai': case 'start': {
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, GojoMdNx.user.name, m)
-                    reply(false)
-                }
-                let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
-                if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, GojoMdNx.user.name, m)
-                    room.b = m.sender
-                    room.state = 'CHATTING'
-                    await GojoMdNx.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, GojoMdNx.user.name, m)
-                } else {
-                    let id = + new Date
-                    this.anonymous[id] = {
-                        id,
-                        a: m.sender,
-                        b: '',
-                        state: 'WAITING',
-                        check: function (who = '') {
-                            return [this.a, this.b].includes(who)
-                        },
-                        other: function (who = '') {
-                            return who === this.a ? this.b : who === this.b ? this.a : ''
-                        },
-                    }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, GojoMdNx.user.name, m)
-                }
                 break
 		                   case 'song': {
                 if (!text) return reply(`Example : .song lelena`)
