@@ -3418,7 +3418,6 @@ let buttons = [
                 await message.client.modifyChat(message.jid, ChatModification.delete);
                 await message.sendMessage('```Chat cleared 🚮```');
   }
-            break
 
 		break
                      case 'alivexx': case 'botxx':{
