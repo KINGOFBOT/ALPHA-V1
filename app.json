@@ -1,7 +1,7 @@
 {
   "name": " ᴀʟᴘʜᴀ ʙᴏᴛ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ",
   "description": "Whatsapp MD  Bot build with nodejs",
-  "repository": "https://github.com/TimashaBuddilax/ALPHA-MD",
+  "repository": "https://github.com/KINGOFBOT/ALPHA-MD",
   "logo": "https://telegra.ph/file/f3b0b4e681583334b7330.jpg",
   "keywords": ["nodejs", "bot", "md whatsapp bot", "whatsapp automation", "multi device"],
      "env": { 
