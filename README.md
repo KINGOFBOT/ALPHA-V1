@@ -1,3 +1,3 @@
 - ALPHA PUBLISHED
 
-RUN ON REPLIT {https://replit.com/@ttimaashbuddil/ALPHA-MD-QR}
+ [`𝗦𝗖𝗔𝗡 𝗤𝗥 𝗖𝗢𝗗𝗘`](https://replit.com/@ttimaashbuddil/ALPHA-MD-QR)
