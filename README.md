@@ -1,1 +1,3 @@
-- ALPHA REALISE ON 2022/11/3
+- ALPHA PUBLISHED
+
+RUN ON REPLIT {https://replit.com/@ttimaashbuddil/ALPHA-MD-QR}
