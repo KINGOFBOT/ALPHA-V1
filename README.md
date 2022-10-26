@@ -8,6 +8,9 @@
 scan qr code 
 
 [![Run on Repl.it](https://repl.it/badge/github/quiec/Alpha-md-qr)](https://replit.com/@ttimaashbuddil/ALPHA-MD-QR)
+
+Deploy button
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TimashaBuddilax/ALPHA-MD) 
 <br> 
 * 𝗛𝗘𝗥𝗢𝗞𝗨 𝗧𝗘𝗠𝗣𝗟𝗔𝗧𝗘 𝗟𝗜𝗡𝗞
