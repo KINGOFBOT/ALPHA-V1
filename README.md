@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=30&color=F753EE&lines=Welcome+To+Alpha-Bot-MD-;This+Bot+Made+By+Rukka)](https://git.io/typing-svg)               
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FFF20E&width=435&lines=welcome+to+ALPHA+-MD-V1;Created+by+Rukka)](https://git.io/typing-svg)               
           
             ⚡️ _ALPHA BOT MD V1_💫
 <p align = center> <img 
