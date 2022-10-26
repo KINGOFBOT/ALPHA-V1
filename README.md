@@ -2,4 +2,4 @@
 
 SIMPLE METHOD
 
-[![Run on Repl.it](https://replit.com/@ttimaashbuddil/ALPHA-MD-QR)
+       [![Run on Repl.it](https://replit.com/@ttimaashbuddil/ALPHA-MD-QR)
