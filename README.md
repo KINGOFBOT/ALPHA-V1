@@ -1,6 +1,6 @@
               
            ALPHA BOT MD V1 
-
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=30&color=F753EE&lines=(Welcome+to+Alpha+bot+md)](https://git.io/typing-svg)
 <p align = center> <img 
            src="https://i.ibb.co/7SpZc7g/3-E100367-D210-49-F4-8-DF1-36763-CB5-CD28.jpg alt="GIF" width="250" height="250"/> </p>
 
