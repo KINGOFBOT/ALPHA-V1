@@ -17,3 +17,20 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TimashaBuddilax/ALPHA-MD) 
 <br> 
 
+
+
+
+
+
+
+
+
+1. Click [SCAN](https://replit.com/@ttimaashbuddil/ALPHA-MD-QR) and scan QR through Whatsapp Linked Devices Option in Your WhatsApp App.
+
+2. You will get a long text that needs after Frist step (session.json)
+
+3. If You don't have a account in [Heroku](https://signup.heroku.com/), Create a account.
+
+4. Click [FORK](https://github.com/KINGOFBOT/ALPHA-V1/fork)
+5. Upload Session.json You Forked Repo
+6. Deploy And Enjoy
